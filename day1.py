@@ -1,7 +1,8 @@
 with open("day1_input", "r") as file:
     hodnoty = file.read()
-cislo = hodnoty.split()
-print(cislo)
+    lines = file.readline()
+line = lines.split("\n")
+cisla = hodnoty.split()
 count = 0
 
 elfs = [
@@ -12,12 +13,12 @@ elfs = [
     #print answer
 
 
-for ciselka in hodnoty:
-    if hodnoty == '\n':
+for elf in cisla:
+    if cisla == '\n':
         elfs.append(f"elf{count}")
         count +=1
     else:
-        elfs.insert(count, hodnoty[count])
-
+        elfs.insert(count, cisla[count])
+print(lines)
     #here define how to seperate data or each elf, after
     #finding a blank line = end of elf1 and make elf2 with empty list
