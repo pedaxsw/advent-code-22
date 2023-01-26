@@ -1,26 +1,31 @@
-file = open("day1_input","r")
+file = open("day1_input", "r")
 
 hodnoty = file.read()
-lines = file.readline()
+lines = hodnoty.split("\n")  # ["line1", "line2"]
 total_lines = len(lines)
 cisla_separate = hodnoty.split()
-count = 0
+
+tmp = 0
 
 elfs = [
-    #here add each elf and add his calories to the list
+    # here add each elf and add his calories to the list
 ]
-    #here calc the elf with most calories
-    # using max function find elf with most calories
-    #print answer
+# here calc the elf with most calories
+# using max function find elf with most calories
+# print answer
 
 
-for elf in hodnoty:
-    if cisla_separate == "":
-        elfs.append(f"elf{count}")
-        count +=1
+for line in lines:
+    if line == "":
+        elfs.append(tmp)
+
+        tmp = 0
     else:
-        elfs.insert(count, cisla_separate[count])
-print(elfs)
+        tmp += int(line)
 
-    #here define how to seperate data or each elf, after
-    #finding a blank line = end of elf1 and make elf2 with empty list
+elfs.sort()
+
+print(elfs[-3, -2, -1])
+
+# here define how to seperate data or each elf, after
+# finding a blank line = end of elf1 and make elf2 with empty list
