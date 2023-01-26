@@ -25,7 +25,9 @@ for line in lines:
 
 elfs.sort()
 
-print(elfs[-3, -2, -1])
+top3 = elfs[:-4:-1]
+total_sum = sum(top3)
+print(total_sum)
 
 # here define how to seperate data or each elf, after
 # finding a blank line = end of elf1 and make elf2 with empty list
